@@ -1,0 +1,22 @@
+class Alumno:
+    def __init__(self, cadena):
+        self.cadena = cadena
+
+    def voltear_cadena(self):
+        return self.cadena[::-1]
+
+    def nombre(self):
+        return self.voltear_cadena()[3:]
+
+    def apellido(self):
+        return self.voltear_cadena()[:3]
+
+    def nota(self):
+        return self.voltear_cadena()[4]
+
+    def __str__(self):
+        return f"{self.nombre()} {self.apellido()} ha sacado un {self.nota()} de nota."
+
+
+alumno = Alumno("zeréP nauJ,01")
+print(alumno)

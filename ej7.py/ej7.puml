@@ -1,0 +1,24 @@
+@startuml
+class AgregarUnaVez
+AgregarUnaVez : - elementos : list
+AgregarUnaVez : + __init__(self)
+AgregarUnaVez : + agregar(self, el)
+
+class ValueError
+
+class Menu
+Menu : - lista : AgregarUnaVez
+Menu : + __init__(self)
+Menu : + agregar_elemento(self)
+Menu : + mostrar_elementos(self)
+Menu : + mostrar_menu(self)
+Menu : + ejecutar(self)
+
+class UserInterface
+UserInterface : + __init__(self)
+UserInterface : + run(self)
+
+Menu --> AgregarUnaVez
+Menu --> UserInterface
+UserInterface --> Menu
+@enduml

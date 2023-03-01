@@ -1,0 +1,24 @@
+@startuml
+class Tarea {
+  -descripcion: str
+  -prioridad: int
+}
+
+class Menu {
+  -tareas: list[Tarea]
+
+  +ordenar_tareas_por_prioridad(): None
+  +menu(): None
+}
+
+class ColaTareas {
+  -tareas: deque
+
+  +agregar_tarea(tarea: Tarea): None
+  +obtener_tarea() -> str
+}
+
+Menu --> Tarea
+Menu --> ColaTareas
+ColaTareas --> Tarea
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+title Función descomposicion
+
+class descomposicion {
+    + descomponer(num: int) -> List[str]
+}
+
+descomposicion ..> List
+@enduml

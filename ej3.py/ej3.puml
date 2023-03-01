@@ -1,0 +1,18 @@
+@startuml
+class Programa {
+    - elementos_repetidos(lista_1: List, lista_2: List) : List
+    + main() : void
+}
+
+Programa --> elementos_repetidos
+
+class List {
+    - elementos : List[str]
+    + __init__(elementos: List[str])
+    + agregar(elemento: str) : void
+    + obtener_elementos() : List[str]
+}
+
+Programa --> List
+
+@enduml

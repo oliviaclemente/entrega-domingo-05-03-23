@@ -1,0 +1,7 @@
+@startuml
+class Separador
++ separar(lista: List[int]) -> Tuple[List[int], List[int]]
+
+Separador --> List
+Separador --> Tuple
+@enduml
